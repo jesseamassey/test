@@ -10,6 +10,7 @@
     "firebase-admin": "^5.9.0"
   },
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass:compile": "node-sass --include-path sass src/scss/styles.scss public/css/styles.css"
   },
