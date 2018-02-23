@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include ../partials/head %>
+</head>
+
+<body>
+	<header>
+		<% include ../partials/header %>
+	</header>
+	<main class="container">
+		<input type="file" id="employeePhoto">
+		<img id="employeePhotoEdit" src="<%= employee.photoURL %>" width="45">
+		<form id=editEmployeeForm method="post">
+			<input type="hidden" class="form-control" placeholder="First name" name="key" value="<%= key %>">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="First name" name="firstName" value="<%= employee.firstName %>">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="First name" name="lastName" value="<%= employee.lastName %>">
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary">Save</button>
+			</div>
+		</form>
+	</main>
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</body>
+
+</html>

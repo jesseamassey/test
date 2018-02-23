@@ -1,0 +1,22 @@
+{
+  "name": "ejsnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "firebase-admin": "^5.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "node-sass --include-path sass src/scss/styles.scss public/css/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-minify-all": "^2.0.3",
+    "node-sass": "^4.7.2"
+  }
+}

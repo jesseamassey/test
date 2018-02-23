@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include ../partials/head %>
+</head>
+
+<body>
+	<header>
+		<% include ../partials/header %>
+	</header>
+	<main class="container">
+		<a href="/employee/edit/<%= key %>">Edit</a>
+		<img src="<%= employee.photoURL %>" width="45">
+		<%= employee.firstName %>
+		<%= employee.lastName %>
+	</main>
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include ../partials/head %>
+</head>
+
+<body>
+	<header>
+		<% include ../partials/header %>
+	</header>
+	<main class="container">
+		<div class="jumbotron">
+			<div class="row">
+				<% people.forEach(function(person) { %>
+					<div class="col-sm">
+						<div class="card" style="width: 18rem;">
+							<img class="img-fluid" src="<%= person.photoURL %>">
+							<div class="card-body">
+								<p class="card-text">
+									<%= person.name %>
+								</p>
+								<a href="/employee/<%= person.key %>">
+									<%= person.name %>
+								</a>
+							</div>
+						</div>
+					</div>
+					<% }); %>
+			</div>
+		</div>
+
+		<div style="width: 300px">
+			<ul class="list-group" id="commentsContainer">
+				<li name="no-comment" class="list-group-item border-0">No comments be the first!</li>
+			</ul>
+			<form id="commentsForm">
+				<input name="comment" >
+				<button class="btn btn-primary btn-sm">Add</button>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+</body>
+
+</html>
